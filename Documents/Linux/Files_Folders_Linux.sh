@@ -30,6 +30,7 @@ rmdir dir1 dir2 dir3
 rm -r non_empty_dir
 
 
+#FILES
 #Creating files
 #By default, the touch command is used to change the modification and access times of a file. 
 #If the file doesn't exist, the touch command is used to create a file with default permissions.

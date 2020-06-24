@@ -33,6 +33,19 @@ Maintainer: GitHub <atom@github.com>
 Architecture: amd64
 Version: 1.21.0
 
+#Extracting an Archive
+
+#From the terminal, change to the directory where yourfile.tar has been downloaded.
+#For this example, we will archive the file "extract_me.tar" is located in "/home/vm/downloads/"
+#We can use the Linux tar command to extract it using this command:
+
+sudo tar -xvf extract_me.tar
+
+#The contentsof the archive (the file named "great_job") will be extracted, and you may see output simialr to:
+
+home/vm/extract_me/
+home/vm/extract_me/great_job
+
 
 
 

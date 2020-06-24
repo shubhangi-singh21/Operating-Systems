@@ -46,6 +46,23 @@ sudo tar -xvf extract_me.tar
 home/vm/extract_me/
 home/vm/extract_me/great_job
 
+#Archiving Files
+
+#You can use the tar command to do the reverse operation, creating an archive.
+#For this example, there are three files in my /home/vm/documents folder named "Earth", "Mercury", and "Venus". We will use tar to archive them into the file "Planets.tar" using this command (one line):
+
+tar -cvf Planets.tar /home/vm/documents/Earth /home/vm/documents/Mercury /home/vm/documents/Venus
+
+#"Planets.tar" will then be added to your current directory, and will contain the three planet files. You may see output similar to:
+
+tar: Removing leading '/' from member names
+/home/vm/documents/Earth
+/home/vm/documents/Mercury
+/home/vm/documents/Venus
+
+#Using the ls command in your current directory, you may see:
+Planets.tar
+
 
 
 

@@ -58,4 +58,26 @@ sudo chmod o-r new_folder
 #You may see output similar to:
 drwx -w---- 2 root root 4096 June 9 02:13 new_folder
 
+#Changing Owners
+#Let us use a folder called taco
+#We can view it's permissions using ls command
+
+ls -ld taco/
+
+#You may see output similar to:
+drwxr-xr-x 2 root root 4096 Oct 21 12:17 taco/
+
+#You can see from this that the root user currently owns this file.
+#There's another user account on the machine called "cook".
+#Let us make "cook" the owner of the file, using the chown command like this
+
+sudo chown cook /home/vm/taco
+
+#Using the ls command to check permissions:
+
+ls -ld taco/
+
+#You may see output similar to:
+drwxr-xr-x 2 cook root 4096 Oct 21 12:17 taco/
+
 

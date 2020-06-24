@@ -80,4 +80,28 @@ ls -ld taco/
 #You may see output similar to:
 drwxr-xr-x 2 cook root 4096 Oct 21 12:17 taco/
 
+#Adding Multiple Permissions at once
+#Let us use a file called doc2
+#We can see it's permissions using ls command
+
+ls -l doc2
+
+#You may see output similar to:
+-rw-r--r-- 1 root root 14 Apr 9 02:13 doc2
+
+#To add read, write, and execute permissions to everyone at once using this command
+
+sudo chmod a+rwx doc2
+
+#Using ls command to check permissions:
+
+ls -l doc2
+
+#You may see output similar to:
+-rwxrwxrwx 1 root root 14 Apr 9 02:13 doc2
+
+#This could also be achieved using the numeric arguement syntax:
+
+sudo chmod 777 doc2
+
 

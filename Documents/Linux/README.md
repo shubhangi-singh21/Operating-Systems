@@ -1,6 +1,6 @@
 # Operating Systems via Command Line
 
-## LINUX
+## 🟠 LINUX 🟠
 
  This repository aims to focus on the practical aspects of the Linux operating system through the *command line*✨
 

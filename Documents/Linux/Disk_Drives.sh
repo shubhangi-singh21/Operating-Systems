@@ -37,4 +37,37 @@ tmpfs		1.9G	0	1,9G	0%	/dev/shm
 tmpfs		5.0M	0	5.0G	0%	/run/lock
 tmpfs		1.9G	0	1.9G	0%	/sys/fs/cgroup
 
+#Partitions
+
+#Instead of using a storage block as a whole, it's common practice to divide a storage block into different partitions.
+#Partitions can be different sizes, and formatted to different filesystems.
+#This allows you to use a single storage device for different purposes.
+
+#You can display partition information using the fdisk command.
+#You can use the -l flag to list partitions in the block.
+
+sudo fdisk -l
+
+#To list partiton contained in specific environment like /dev/sdb, pass /dev/sdb to the fdisk command.
+
+sudo fdisk -l /dev/sdb
+
+#fdisk displays information contained in the partition table, where information about partitions is stored.
+#When the fdisk command is used without options, it provides a menu-driven environment for creating and deleting partitions.
+
+#Mount and Unmount
+
+#Mounting and unmounting mean making devices available or unavailable on a Linux file system.
+#This is accomplished by the mount and unmount commands.
+#Before modifying a disk, you should first unmount it from the system, using the umount command. 
+#When modifications on the disk are done, you should mount it back onto the system.
+#Exmaple:
+#Start fdisk by passing the disk you want to partition as the parameter.
+
+sudo fdisk /dev/sda
+
+#fdisk will start in interactive mode. You can use m to use help provided by the command.
+#You can use p to show details about partitions on the disk.
+#Enter q to exit interactive mode when you are finished exploring.
+
 

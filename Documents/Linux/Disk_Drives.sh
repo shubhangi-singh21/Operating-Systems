@@ -109,3 +109,30 @@ sudo fdisk /dev/sda
 #You can also use the v command to verify your changes.
 #If you're satisfied with the changes you've made so far, you can commit them to the disk by using the w command.
 
+
+#Formatting partitions using mkfs
+#Multiple filesystem types exist, and it's important to know all of them, along with the functions they're best suited for.
+#In this example, we will format the second partition into ext4, the most widely used Linux filesystem type.
+
+lsblk
+
+#You may see output similar to:
+NAME    MAJ:MIN RM      SIZE    RO      TYPE    MOUNTPOINT
+sda     8:0     0       10G     0       disk
+ |_sda1 8:1     0       1023M   0       part
+ |_sda2	8:2	0	9G	0	part
+sdb     8:16    0       10G     0       disk
+ |_sdb1 8:17    0       10G     0       part /
+
+#We can format the second partition in the unmounted drive(sdb2 or sda2) to ext4 using command:
+
+sudo mkfs -t ext4 /dev/sd2
+
+#We xan now mount /dev/sda2 to a location on the file system to start accessing files on it.
+#In this example, we will mount it to /home/my_drive directory
+
+sudo mount /dev/sda2 /home/my_drive
+
+#After this, accessing "/home/my_drive" will be accessing files on the disk.
+
+

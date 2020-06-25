@@ -70,4 +70,42 @@ sudo fdisk /dev/sda
 #You can use p to show details about partitions on the disk.
 #Enter q to exit interactive mode when you are finished exploring.
 
+#Creating Partitions
+
+#For this example we will create new partition using fdisk. 
+#We will partition the second drive into two partitions:one swap partition of 1GB and another of size 9GB.
+#The file system on the second partition will be ext4.
+
+sudo fdisk /dev/sda
+
+#To create a new partition, the command control n is used.
+#However, since all the space on the disk is currently allocated, you'll need to first free up space by deleting the default partition.
+#Use the d command control to delete the default partition. 
+#When you issue the d command control, fdisk asks you to enter the number of partitions you want to delete. Since you only have one partition, the default one, fdisk will automatically select and delete it to continue.
+
+#You're now able to create your new partitions. Enter the command control for creating a new partition, n.
+#fdisk will present you with two options to select from: p for primary, and e for extended or logical partition. 
+#Since we want to create the partitions on the actual physical disk, select p by pressing Enter.
+#Next, you'll need to provide the partition number for the new partition. Since it's a primary partition, it can only be labelled from 1-4.
+#Give the number 1 to this first partition by pressing Enter, or optionally entering 1.
+#You'll then need to provide the starting sector (memory location) of the new partition, from where you want to allocate. Here, press Enter to select the default value 2048.
+#Provide the last sector of the new partition, up to where you want to allocate.
+#Two important things happen here: the partition size is set to 1GB, and the partition type is set to Linux.
+
+#Now we move on to create the second partition using command control n.
+#Select p for a primary partition.
+#Select partition number 2 to issue partition numbers in sequence.
+#Select the default partition starting sector, which is the next sector from the last partition you allocated.
+#Also select the default last sector, which will be the last sector of the remaining disk space.
+#The second partition is now created!
+#Before committing your changes, you'll change the second partition to a different partition type.
+#You'll change the first partition type to a Linux swap type. 
+#Enter command control t to change the partition type, and select the first partition.
+#You can use the command control L to view a list of all partition types.
+#Enter 82 to change the partition type to ‘Linux swap / Solaris', and press Enter.
+#The partition type will be changed to match the selection.
+#Up to this point, you've just been editing the partition table in memory. You can use the q command here to quit fdisk without committing changes to the disk.
+#You can also update your partitions by using the d and n commands to remove and add new partitions.
+#You can also use the v command to verify your changes.
+#If you're satisfied with the changes you've made so far, you can commit them to the disk by using the w command.
 

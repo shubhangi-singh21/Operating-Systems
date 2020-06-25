@@ -22,6 +22,18 @@
 
 ____
 
+### Feedback
+
+Feel free to drop your suggestions [here](mailto:singhshubhangi211@gmail.com) regarding the material or if you want me to cover more areas in this repository 📝
+
+____
+
+### Save for Later
+
+⭐ this repository and refer to it whenever you are stuck at the command line!
+
+____
+
 
 
 

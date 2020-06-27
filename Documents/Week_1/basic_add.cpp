@@ -1,7 +1,7 @@
 #include <iostream>
 
-int sum_of_two_digits(int first_digit, int second_digit) {
-    return first_digit + second_digit;
+int sum_of_two_numbers(int first, int second) {
+    return first + second;
 }
 
 int main() {
@@ -9,6 +9,6 @@ int main() {
     int b = 0;
     std::cin >> a;
     std::cin >> b;
-    std::cout << sum_of_two_digits(a, b);
+    std::cout << sum_of_two_numbers(a, b);
     return 0;
 }

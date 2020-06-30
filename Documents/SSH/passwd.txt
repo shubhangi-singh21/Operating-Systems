@@ -1,0 +1,15 @@
+Password/Paraphrase Examples
+
+Bad Passwords
+
+Password
+P@ssw0rd
+
+Drawbacks: too short, based on dictionary words, commanly used
+
+Good Passwords
+
+S3cT0r2017-SecurityC0nf
+UbuntuS3rverR3m0te@dmin!
+
+Advanrages: long, combination of words, usage of symbols, numbers, upper case characters

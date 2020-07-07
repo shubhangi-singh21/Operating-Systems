@@ -39,7 +39,14 @@ ICACLS C:\Users\Qwiklab\Documents\important_document
 
 ICACLS C:\Users\vm\Secret\
 
-
+#You may see output similar to:
+WINDOWS-INSTANC\Kara:(R)
+NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+BUILTIN\Administrators:(I)(OI)(CI)(F)
+BUILTIN\Users:(I)(RX)
+BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
+Everyone:(I)(RX)
+Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
 
 

@@ -32,6 +32,13 @@ ICACLS C:\Users\vm\Documents\imporatant_document /grant "Kara:(r)"
 
 ICACLS C:\Users\Qwiklab\Documents\important_document
 
+#Example 2:
+#There's a folder called "Secret" in my path "C:\Users\vm\" where the user "Kara" has read access. 
+#Our goal in this example is to alter these permissions so that another user (named "Phoebe") has read permissions as well, and Kara has both read and write permissions. 
+#You can view the current permissions with this command, and see that Kara has read permissions and Phoebe is not included.
+
+ICACLS C:\Users\vm\Secret\
+
 
 
 

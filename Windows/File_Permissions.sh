@@ -85,5 +85,26 @@ BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
 Everyone:(I)(RX)
 Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
+#Example 3:
+#There's another folder in "C:\Users\vm\" called "Music".
+#The user group, named "Everyone", has both read and write permissions for this folder.
+#User groups are sets of local users that allow you to change multiple users' permissions at once. 
+# For example, a computer that's used by lots of employees at a business may have a usergroup called "Employees" that new hires are added to when they onboard. This automatically gives them access to everything they need, without it having to be set manually. The "Everyone" group is created by default, and every new user is automatically added.
+#Our goal for this example is to change the permissions for this folder so that the "Everyone" group only has read permission (not write).
+
+#We can view the current permissions with this command:
+
+ICACLS C:\Users\vm\Music\
+
+#You may see output similar to:
+NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+BUILTIN\Administrators:(I)(OI)(CI)(F)
+BUILTIN\Users:(I)(RX)
+BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
+Everyone:(I)(RX)
+Everyone:(I)(OI)(CI)(IO)(GR,GE)
+
+#You can change permissions for groups in exactly the same way as you do for users.
+#To remove the group's current permissions, and then re-grant them a read permission, use these commands:
 
 

@@ -48,5 +48,22 @@ BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
 Everyone:(I)(RX)
 Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
+#First, give Phoebe read access. You can grant her these permissions with the command below:
+
+ICACLS C:\Users\vm\Secret\ /grant "Phoebe:(r)"
+
+#You can verify this using:
+
+ICACLS C:\Users\vm\Secret\
+
+#You may see output similar to:
+WINDOWS-INSTANC\Phoebe:(R)
+WINDOWS-INSTANC\Kara:(R)
+NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+BUILTIN\Administrators:(I)(OI)(CI)(F)
+BUILTIN\Users:(I)(RX)
+BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
+Everyone:(I)(RX)
+Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
 

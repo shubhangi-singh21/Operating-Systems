@@ -66,4 +66,24 @@ BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
 Everyone:(I)(RX)
 Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
+#The next step is to grant Kara write permissions.
+#You don't need to remove her existing permissions first, like you did before; you only need to add "write" to her existing permissions with this command:
+
+ICACLS C:\Users\Qwiklab\Secret\ /grant "Kara:(w)"
+
+#You can verify this using:
+
+ICACLS C:\Users\vm\Secret\
+
+#You may see output similar to:
+WINDOWS-INSTANC\Phoebe:(R)
+WINDOWS-INSTANC\Kara:(R,W)
+NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+BUILTIN\Administrators:(I)(OI)(CI)(F)
+BUILTIN\Users:(I)(RX)
+BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
+Everyone:(I)(RX)
+Everyone:(I)(OI)(CI)(IO)(GR,GE)
+
+
 

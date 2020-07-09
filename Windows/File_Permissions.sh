@@ -107,4 +107,20 @@ Everyone:(I)(OI)(CI)(IO)(GR,GE)
 #You can change permissions for groups in exactly the same way as you do for users.
 #To remove the group's current permissions, and then re-grant them a read permission, use these commands:
 
+ICACLS C:\Users\Qwiklab\Music\ /remove "Everyone"
+
+ICACLS C:\Users\Qwiklab\Music\ /grant "Everyone:(r)"
+
+ICACLS C:\Users\vm\Music\
+
+#You may see output similar to:
+Everyone:(R)
+NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+BUILTIN\Administrators:(I)(OI)(CI)(F)
+BUILTIN\Users:(I)(RX)
+BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
+Everyone:(I)(RX)
+Everyone:(I)(OI)(CI)(IO)(GR,GE)
+
+
 

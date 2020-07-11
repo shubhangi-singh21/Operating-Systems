@@ -131,5 +131,12 @@ Everyone:(I)(OI)(CI)(IO)(GR,GE)
 ICACLS C:\Users\vm\Documents\not_so_important_document
 
 #You may see output similar to:
+NT AUTHORITY\SYSTEM:(I)(F)
+BUILTIN\Administrators:(I)(F)
+BUILTIN\Users:(I)(RX)
+Everyone:(I)(RX)
 
+#This will show you that the "Authenticated Users" group is currently not listed.
+#This means that the only step required is to grant them write access, which you can do with this command:
 
+ICACLS C:\Users\Qwiklab\Documents\not_so_important_document /grant "Authenticated Users:(w)"

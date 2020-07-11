@@ -140,3 +140,16 @@ Everyone:(I)(RX)
 #This means that the only step required is to grant them write access, which you can do with this command:
 
 ICACLS C:\Users\Qwiklab\Documents\not_so_important_document /grant "Authenticated Users:(w)"
+
+#That should successfully grant them write permissions.
+#You can use the same command as earlier to verify that the commands were a success:
+
+ICACLS C:\Users\Qwiklab\Documents\not_so_important_document
+
+#You may see output similar to:
+NT AUTHORITY\Authenticated Users:(W)
+NT AUTHORITY\SYSTEM:(I)(F)
+BUILTIN\Administrators:(I)(F)
+BUILTIN\Users:(I)(RX)
+Everyone:(I)(RX)
+

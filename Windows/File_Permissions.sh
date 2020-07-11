@@ -122,5 +122,14 @@ BUILTIN\Users:(I)(OI)(CI)(IO)(GR,GE)
 Everyone:(I)(RX)
 Everyone:(I)(OI)(CI)(IO)(GR,GE)
 
+#Example 4:
+#Back in the "documents" folder from before, I have a file called "not_so_important_document".
+#In this example, we will modify the permissions for that file so that the group called "Authenticated Users" has "Write" access.
+#The "Authenticated Users" group is another automatically created group, containing all users with admin privileges. 
+#You can iew the current permissions with this command, to see what the starting point for this file is:
+
+ICACLS C:\Users\vm\Documents\not_so_important_document
+
+#You may see output similar to:
 
 

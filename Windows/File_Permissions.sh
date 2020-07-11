@@ -153,3 +153,12 @@ BUILTIN\Administrators:(I)(F)
 BUILTIN\Users:(I)(RX)
 Everyone:(I)(RX)
 
+#Example 5:
+#In this example, we will change the permissions of another file in the "Documents" folder.
+#The file named "public_document" needs to be made publically readable, so that anyone on the system is able to read it. 
+#As usual, view the file's commands first:
+
+ICACLS C:\Users\vm\Documents\public_document
+
+
+

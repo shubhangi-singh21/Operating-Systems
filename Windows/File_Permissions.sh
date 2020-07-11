@@ -170,7 +170,16 @@ Everyone:(I)(RX)
 #You could also add each user manually, but by giving the group the permissions instead, you save time; it removes the need to go back and edit permissions again if a new user is created in the future.
 #Grant every user on the system the ability to read the file using this command:
 
-ICACLS C:\Users\Qwiklab\Documents\public_document /grant "Everyone:(r)"
+ICACLS C:\Users\vm\Documents\public_document /grant "Everyone:(r)"
 
+#Finally, view the permissions again to make sure it worked:
 
+ICACLS C:\Users\vm\Documents\public_document
+
+#You may see output similar to:
+Everyone:(R)
+NT AUTHORITY\SYSTEM:(I)(F)
+BUILTIN\Administrators:(I)(F)
+BUILTIN\Users:(I)(RX)
+Everyone:(I)(RX)
 

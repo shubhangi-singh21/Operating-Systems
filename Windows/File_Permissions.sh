@@ -22,7 +22,7 @@ ICACLS C:\Users\vm\Documents\imporatant_document /remove "Kara"
 
 #You can check whether Kara is removed or not using:
 
-ICACLS C:\Users\Qwiklab\Documents\important_document
+ICACLS C:\Users\vm\Documents\important_document
 
 #As you can see, Kara is no longer listed in the file's permissions. To re-grant her only the read permission, use these command:
 
@@ -30,7 +30,7 @@ ICACLS C:\Users\vm\Documents\imporatant_document /grant "Kara:(r)"
 
 #You can check this again using:
 
-ICACLS C:\Users\Qwiklab\Documents\important_document
+ICACLS C:\Users\vm\Documents\important_document
 
 #Example 2:
 #There's a folder called "Secret" in my path "C:\Users\vm\" where the user "Kara" has read access. 
@@ -69,7 +69,7 @@ Everyone:(I)(OI)(CI)(IO)(GR,GE)
 #The next step is to grant Kara write permissions.
 #You don't need to remove her existing permissions first, like you did before; you only need to add "write" to her existing permissions with this command:
 
-ICACLS C:\Users\Qwiklab\Secret\ /grant "Kara:(w)"
+ICACLS C:\Users\vm\Secret\ /grant "Kara:(w)"
 
 #You can verify this using:
 
@@ -107,9 +107,9 @@ Everyone:(I)(OI)(CI)(IO)(GR,GE)
 #You can change permissions for groups in exactly the same way as you do for users.
 #To remove the group's current permissions, and then re-grant them a read permission, use these commands:
 
-ICACLS C:\Users\Qwiklab\Music\ /remove "Everyone"
+ICACLS C:\Users\vm\Music\ /remove "Everyone"
 
-ICACLS C:\Users\Qwiklab\Music\ /grant "Everyone:(r)"
+ICACLS C:\Users\vm\Music\ /grant "Everyone:(r)"
 
 ICACLS C:\Users\vm\Music\
 
@@ -139,12 +139,12 @@ Everyone:(I)(RX)
 #This will show you that the "Authenticated Users" group is currently not listed.
 #This means that the only step required is to grant them write access, which you can do with this command:
 
-ICACLS C:\Users\Qwiklab\Documents\not_so_important_document /grant "Authenticated Users:(w)"
+ICACLS C:\Users\vm\Documents\not_so_important_document /grant "Authenticated Users:(w)"
 
 #That should successfully grant them write permissions.
 #You can use the same command as earlier to verify that the commands were a success:
 
-ICACLS C:\Users\Qwiklab\Documents\not_so_important_document
+ICACLS C:\Users\vm\Documents\not_so_important_document
 
 #You may see output similar to:
 NT AUTHORITY\Authenticated Users:(W)

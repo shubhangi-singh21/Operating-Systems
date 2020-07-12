@@ -23,7 +23,19 @@ Compress-Archive -Path Earth, Mercury, Venus Planets.zip
 
 $ErrorActionPreference= 'silentlycontinue'
 
+#Installing Chocolatey
+#In your open Powershell terminal, you first need to register the Chocolatey package with Powershell.
+#Your machine may currently have it registered incorrectly, so unregister it with this command (if you see an error, it means that it is not registered):
 
+Unregister-PackageSource -Name chocolatey
 
+#Then you can re-register Chocolatey, so that it can be installed using this command (one line)
+
+Register-PackageSource -Name chocolatey -ProviderName Chocolatey -Location http://chocolatey.org/api/v2/
+
+#You'll need to enter "Y" for "Yes" when prompted to confirm the operation.
+
+#Using Chocolatey to install VLC
+#Now you can use Chocolatey to install VLC (a media player) using the following command, and bypassing the need to find and download an installer manually:
 
 

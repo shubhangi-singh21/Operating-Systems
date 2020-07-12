@@ -51,3 +51,17 @@ Name      Version     Source                            ProviderName
 ----      -------     ------                            ------------
 vlc       2.2.6       C:\Chocolatey\lib\vlc.2.2.6\v...  Chocolatey
 
+
+#Uninstalling a Software
+#In this example we will uninstall a software called GIMP.
+#You can also use Chocolatey to uninstall programs, too.
+#If you've closed your Powershell window, reopen it again by searching for it in the Start Menu, then right-clicking it and selecting "Run as Administrator".
+#You can use uninstall GIMP, which is a photo editor, using this command:
+
+Choco Uninstall GIMP
+
+#You'll be prompted to confirm your choice again by typing "Y" (for "Yes"). 
+#Once the process finishes, GIMP will no longer be installed on your system. 
+#You can verify this with the following command and seeing that GIMP is not listed:
+
+Get-Package

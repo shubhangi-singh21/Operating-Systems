@@ -38,4 +38,16 @@ Register-PackageSource -Name chocolatey -ProviderName Chocolatey -Location http:
 #Using Chocolatey to install VLC
 #Now you can use Chocolatey to install VLC (a media player) using the following command, and bypassing the need to find and download an installer manually:
 
+Install-Package -Name vlc -Source chocolatey
+
+#You'll be prompted to confirm the installation midway through the process. 
+#To do this, enter "A" (for "All") to accept all prompts at once.
+#You can verify that VLC has successfully been installed with this command:
+
+Get-Package -Name vlc
+
+#You may see output similar to:
+Name      Version     Source                            ProviderName
+----      -------     ------                            ------------
+vlc       2.2.6       C:\Chocolatey\lib\vlc.2.2.6\v...  Chocolatey
 

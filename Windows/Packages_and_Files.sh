@@ -10,5 +10,9 @@ cd C:\Users\vm\Documents\
 
 Compress-Archive -Path Earth, Mercury, Venus Planets.zip
 
+#Install and uninstall software using Windows CLI
+
+#In this example, we will install VLC.
+
 
 

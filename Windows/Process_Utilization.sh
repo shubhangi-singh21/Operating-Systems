@@ -11,3 +11,12 @@ Get-Process -Name "totally_not_malicious"
 
 #You will see output similar to:
 
+Handles   NPM(K)    PM(K)   WS(K)   CPU(s)    Id    SI  ProcessName
+-------   ------    -----   -----   ------    --    --  -----------
+    182       13     2536   10548   
+    
+    
+    
+    
+    
+

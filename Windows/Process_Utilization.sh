@@ -38,7 +38,11 @@ Get-Process -Name "totally_not_malicious"
 Get-Process -Name "*razzle*"
 
 #This will show two processes that contain "razzle" in their name:
+You can use taskkill, like before, once for each of the "razzle" processes:
 
+Note: Make sure you replace/substitute the "[PROCESS ID]" with id of the process you got from the previous command.
+
+taskkill /F /PID [PROCESS ID]
 
     
     

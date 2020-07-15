@@ -31,6 +31,14 @@ Get-Process -Name "totally_not_malicious"
 #This should throw an error because no process by that name exists anymore, indicating that you've successfully ended it.
 
 #Terminating multiple processes
+#There are processes containing the word "razzle" also running on this VM. 
+#Get-Process doesn't handle processes with partially-matching names, like grep does, and running Get-Process -Name "razzle" would result in no matches. 
+#However, you can use "wildcards" (asterisks) to look for processes that contain "razzle" in their name:
+
+Get-Process -Name "*razzle*"
+
+#This will show two processes that contain "razzle" in their name:
+
 
     
     

@@ -13,7 +13,25 @@ Get-Process -Name "totally_not_malicious"
 
 Handles   NPM(K)    PM(K)   WS(K)   CPU(s)    Id    SI  ProcessName
 -------   ------    -----   -----   ------    --    --  -----------
-    182       13     2536   10548   
+    182       13     2536   10548            3772    0  totally_not_malicious
+    
+#To end a process, you can use taskkill and specify the Process ID, or PID, of the process:
+#Note: Make sure you replace/substitute the "[PROCESS ID]" with id of the process you got from the previous command
+
+taskkill /F /PID [PROCESS ID]
+
+#You should see this message after running taskkill with the PID for your process, which will likely be different than the ID specified here:
+
+SUCCESS: The process with PID 3772 has been terminated.
+
+#To verify that the process is no longer running, you can search for it again:
+
+Get-Process -Name "totally_not_malicious"
+
+#This should throw an error because no process by that name exists anymore, indicating that you've successfully ended it.
+
+
+    
     
     
     

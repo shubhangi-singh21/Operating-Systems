@@ -30,6 +30,7 @@ Get-Process -Name "totally_not_malicious"
 
 #This should throw an error because no process by that name exists anymore, indicating that you've successfully ended it.
 
+#Terminating multiple processes
 
     
     

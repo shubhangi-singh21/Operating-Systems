@@ -14,11 +14,7 @@
 
 ✔ Package and software management
 
-✔ Filesystems
-
 ✔ Process Management
-
-✔ Logs
 
 ____
 

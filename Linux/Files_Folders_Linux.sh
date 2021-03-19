@@ -45,6 +45,8 @@ touch new_file
 
 cp /home/user/source_file /home/user/duplicates/target_file
 
+#You can also use '.' to copy the files to your current path without typing out the whole path
+
 #Moving files and directories
 #The move command is used to move one or more files or directories into a different location, or rename them to a new name. 
 #You're required to pass at least one source and target file names or directories.

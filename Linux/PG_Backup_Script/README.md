@@ -39,7 +39,3 @@ $ sudo chmod +x /usr/local/bin/pg_backup
 ### Usage
 
 Put the crontab in cron using ```crontab -e```. You can customize it, if you want to.
-
-### License
-
-Please check the main repo, CLI_utils.
